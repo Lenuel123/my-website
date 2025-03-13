@@ -1,7 +1,6 @@
 import { Gesture } from '@mui/icons-material';
 import MenuIcon from '@mui/icons-material/Menu';
 import AppBar from '@mui/material/AppBar';
-import Avatar from '@mui/material/Avatar';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Container from '@mui/material/Container';
@@ -9,12 +8,11 @@ import IconButton from '@mui/material/IconButton';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import Toolbar from '@mui/material/Toolbar';
-import Tooltip from '@mui/material/Tooltip';
 import Typography from '@mui/material/Typography';
 import * as React from 'react';
 import { pages } from '../data/header';
 
-const Header = () => {
+const Header = ({ refs }) => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   // const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -33,20 +31,23 @@ const Header = () => {
   //   setAnchorElUser(null);
   // };
 
+  const handleScroll = (section) => {
+    refs[`${section}Ref`]?.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
-    <AppBar position="sticky">
+    <AppBar position="sticky" style={{ backgroundColor: '#0061fe', boxShadow: 'none' }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <Gesture sx={{ fontSize: '40px', marginRight: '10px', display: { xs: 'none', md: 'flex' }}}/>
+          <Gesture sx={{ fontSize: '40px', marginRight: '10px', display: { xs: 'none', md: 'flex' } }} />
           <Typography
             variant="h5"
             noWrap
             component="a"
-            href="/#"
+            href="/"
             sx={{
               mr: 2,
               display: { xs: 'none', md: 'flex' },
-              fontFamily: 'monospace',
               fontWeight: 700,
               letterSpacing: '.3rem',
               color: 'inherit',
@@ -91,17 +92,17 @@ const Header = () => {
             </Menu>
           </Box>
 
-          <Gesture sx={{ fontSize: '40px', marginRight: '10px', display: { xs: 'flex', md: 'none' }}}/>
+          <Gesture sx={{ fontSize: '40px', marginRight: '10px', display: { xs: 'flex', md: 'none' } }} />
           <Typography
             variant="h5"
             noWrap
             component="a"
-            href="/#"
+            href="/"
             sx={{
               mr: 2,
               display: { xs: 'flex', md: 'none' },
               flexGrow: 1,
-              fontFamily: 'monospace',
+              fontFamily: '',
               fontWeight: 700,
               letterSpacing: '.3rem',
               color: 'inherit',
@@ -111,12 +112,15 @@ const Header = () => {
             Gestures
           </Typography>
 
-          <Box sx={{ marginLeft: '50px', flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent: 'flex-end'  }}>
+          <Box sx={{ marginLeft: '50px', flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent: 'flex-end' }}>
             {pages.map((page) => (
               <Button
                 key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, px: 3, color: 'white', display: 'block',  }}
+                onClick={() => {
+                  handleCloseNavMenu();
+                  handleScroll(page.toLowerCase());
+                }}
+                sx={{ my: 2, px: 3, color: "white", display: "block" }}
               >
                 {page}
               </Button>
@@ -151,6 +155,18 @@ const Header = () => {
                 </MenuItem>
               ))}
             </Menu> */}
+            <Button sx={{
+              backgroundColor: '#fff',
+              color: '#0061fe',
+              px: 3,
+              py: 1,
+              fontWeight: 700,
+              borderRadius: '50px',
+              textTransform: 'none',
+              zIndex: 1
+            }}>
+              Try for Free
+            </Button>
           </Box>
         </Toolbar>
       </Container>

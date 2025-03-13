@@ -2,13 +2,13 @@ import React from "react";
 import PropTypes from "prop-types";
 import Header from "../components/Header";
 
-const MainLayout = ({ children }) => {
+const MainLayout = ({ children, refs }) => {
   return (
-    <div style={{ height: '200vh'}}>
-      <Header />
+    <>
+      <Header refs={refs} />
       <main>{children}</main>
       {/* <Footer /> */}
-    </div>
+    </>
   );
 };
 

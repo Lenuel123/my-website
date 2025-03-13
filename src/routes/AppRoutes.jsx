@@ -1,14 +1,14 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import React, { Suspense, lazy } from "react";
 
-const LandingPage = lazy(() => import("../pages/LandingPage"));
-const loading = () => <div>Loading...</div>;
+const Main = lazy(() => import("../pages/Main"));
+// const loading = () => <div>Loading...</div>;
 const AppRoutes = () => {
     return (
         <Router>
-            <Suspense fallback={loading()}>
+            <Suspense>
                 <Routes>
-                    <Route path="/" element={<LandingPage />} />
+                    <Route path="/" element={<Main />} />
                 </Routes>
             </Suspense>
         </Router>
