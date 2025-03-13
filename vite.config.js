@@ -3,10 +3,10 @@ import react from '@vitejs/plugin-react-swc';
 import eslint from 'vite-plugin-eslint';
 
 export default defineConfig({
-  plugins: [react(), eslint()], // Add ESLint plugin
+  plugins: [react(), eslint()],
   server: {
     hmr: {
-      overlay: true, // Show errors in browser & terminal
+      overlay: true, // Shows error overlay in the browser
     },
   },
   resolve: {
@@ -14,4 +14,17 @@ export default defineConfig({
       "@": "/src",
     },
   },
+  build: {
+    outDir: 'dist',
+    assetsDir: 'assets',
+    emptyOutDir: true,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          react: ['react', 'react-dom'],
+        },
+      },
+    },
+  },
+  base: './',
 });
