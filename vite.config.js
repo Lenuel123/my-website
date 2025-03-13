@@ -3,6 +3,7 @@ import react from '@vitejs/plugin-react-swc';
 import eslint from 'vite-plugin-eslint';
 
 export default defineConfig({
+  base: "/my-website/",
   plugins: [react(), eslint()],
   server: {
     hmr: {
@@ -17,14 +18,5 @@ export default defineConfig({
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
-    emptyOutDir: true,
-    rollupOptions: {
-      output: {
-        manualChunks: {
-          react: ['react', 'react-dom'],
-        },
-      },
-    },
   },
-  base: "/my-website/",
 });
