@@ -15,7 +15,7 @@ const ContactUs = () => {
                         <Typography
                             variant="h4"
                             sx={{
-                                mt: !isMobile ? 20 : 5,
+                                mt: !isMobile ? 20 : 10,
                                 mb: 3,
                                 display: { xs: 'flex', md: 'flex' },
                                 fontWeight: 700,

@@ -33,7 +33,7 @@ const Features = () => {
 
                 <Row>
                     <Col sx={{ xs: '12', md: '6', lg: '6' }}>
-                        <Card sx={{ p: 2, px: 3, borderRadius: '15px' }} data-aos="fade-up-right">
+                        <Card sx={{ p: 2, px: 3, borderRadius: '15px' }} data-aos={!isMobile && "fade-up-right" }>
                             <div className='d-flex align-items-center'>
                                 <LooksOneRounded fontSize='large' sx={{ color: '#0061fe', marginRight: '5px' }} />
                                 <h5 className='text-uppercase' style={{ margin: 0, color: '#0061fe' }}><b>Upload or Draw</b></h5>
@@ -61,7 +61,7 @@ const Features = () => {
                 <Row>
                 {!isMobile && <Col sx={{ xs: '12', md: '6', lg: '6' }} />}
                     <Col sx={{ xs: '12', md: '6', lg: '6' }}>
-                        <Card sx={{ p: 2, px: 3, borderRadius: '15px' }} data-aos="fade-up-left">
+                        <Card sx={{ p: 2, px: 3, borderRadius: '15px' }} data-aos={!isMobile && "fade-up-left" }>
                             <div className='d-flex align-items-center'>
                                 <LooksTwoRounded fontSize='large' sx={{ color: '#0061fe', marginRight: '5px' }} />
                                 <h5 className='text-uppercase' style={{ margin: 0, color: '#0061fe' }}><b>AI Processing</b></h5>
@@ -87,7 +87,7 @@ const Features = () => {
 
                 <Row>
                     <Col sx={{ xs: '12', md: '6', lg: '6' }}>
-                        <Card sx={{ p: 2, px: 3, borderRadius: '15px' }} data-aos="fade-up-right">
+                        <Card sx={{ p: 2, px: 3, borderRadius: '15px' }} data-aos={!isMobile && "fade-up-right" }>
                             <div className='d-flex align-items-center'>
                                 <Looks3Rounded fontSize='large' sx={{ color: '#0061fe', marginRight: '5px' }} />
                                 <h5 className='text-uppercase' style={{ margin: 0, color: '#0061fe' }}><b>Style Selection</b></h5>
@@ -115,7 +115,7 @@ const Features = () => {
                 <Row>
                 {!isMobile && <Col sx={{ xs: '12', md: '6', lg: '6' }} />}
                     <Col sx={{ xs: '12', md: '6', lg: '6' }}>
-                        <Card sx={{ p: 2, px: 3, borderRadius: '15px' }} data-aos="fade-up-left">
+                        <Card sx={{ p: 2, px: 3, borderRadius: '15px' }} data-aos={!isMobile && "fade-up-left"}>
                             <div className='d-flex align-items-center'>
                                 <Looks4Rounded fontSize='large' sx={{ color: '#0061fe', marginRight: '5px' }} />
                                 <h5 className='text-uppercase text-truncate' style={{ margin: 0, color: '#0061fe' }}><b>Refinement & Customization</b></h5>
@@ -142,7 +142,7 @@ const Features = () => {
 
                 <Row>
                     <Col sx={{ xs: '12', md: '6', lg: '6' }}>
-                        <Card sx={{ p: 2, px: 3, borderRadius: '15px' }} data-aos="fade-up-right">
+                        <Card sx={{ p: 2, px: 3, borderRadius: '15px' }} data-aos={!isMobile && "fade-up-right"}>
                             <div className='d-flex align-items-center'>
                                 <Looks5Rounded fontSize='large' sx={{ color: '#0061fe', marginRight: '5px' }} />
                                 <h5 className='text-uppercase text-truncate' style={{ margin: 0, color: '#0061fe' }}><b>Preview & Adjustments</b></h5>
@@ -170,7 +170,7 @@ const Features = () => {
                 <Row>
                 {!isMobile && <Col sx={{ xs: '12', md: '6', lg: '6' }} />}
                     <Col sx={{ xs: '12', md: '6', lg: '6' }}>
-                        <Card sx={{ p: 2, px: 3, borderRadius: '15px' }} data-aos="fade-up-left">
+                        <Card sx={{ p: 2, px: 3, borderRadius: '15px' }} data-aos={!isMobile && "fade-up-left"}>
                             <div className='d-flex align-items-center'>
                                 <Looks6Rounded fontSize='large' sx={{ color: '#0061fe', marginRight: '5px' }} />
                                 <h5 className='text-uppercase' style={{ margin: 0, color: '#0061fe' }}><b>Export & Share</b></h5>

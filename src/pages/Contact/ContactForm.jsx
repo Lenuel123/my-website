@@ -22,7 +22,7 @@ const ContactForm = () => {
         <div style={{ height: '100%', backgroundColor: '', padding: !isMobile ? '50px' : '20px' }}>
             <Container maxWidth="sm">
                 <form onSubmit={handleSubmit}>
-                    <div className="mb-3" data-aos="fade-up">
+                <div className="mb-3" data-aos={!isMobile && "fade-up"}>
                         <div>
                             <b>Full Name <span className="text-danger">*</span></b>
                         </div>
@@ -32,12 +32,12 @@ const ContactForm = () => {
                             placeholder="Your full name"
                             value={formData.fullName}
                             onChange={handleChange}
-                            className="w-100 mt-1 p-3 border rounded-md focus:ring focus:ring-blue-300"
+                            className="w-100 mt-1 p-3 border rounded-md"
                             required
                         />
                     </div>
 
-                    <div className="mb-3" data-aos="fade-right">
+                    <div className="mb-3" data-aos={!isMobile && "fade-left"}>
                         <div>
                             <b>E-mail <span className="text-danger">*</span></b>
                         </div>
@@ -47,12 +47,12 @@ const ContactForm = () => {
                             placeholder="Your e-mail address"
                             value={formData.email}
                             onChange={handleChange}
-                            className="w-100 mt-1 p-3 border rounded-md focus:ring focus:ring-blue-300"
+                            className="w-100 mt-1 p-3 border rounded-md"
                             required
                         />
                     </div>
 
-                    <div className="mb-3" data-aos="fade-left">
+                    <div className="mb-3" data-aos={!isMobile && "fade-right"}>
                         <div>
                             <b>Message <span className="text-danger">*</span></b>
                         </div>
@@ -61,7 +61,7 @@ const ContactForm = () => {
                             placeholder="Your question about our services"
                             value={formData.message}
                             onChange={handleChange}
-                            className="w-100 mt-1 p-3 border rounded-md focus:ring focus:ring-blue-300"
+                            className="w-100 mt-1 p-3 border rounded-md"
                             rows="4"
                             required
                         />
@@ -99,7 +99,6 @@ const ContactForm = () => {
                         We value your time and will respond as soon as possible. Thank you for choosing Gestures, and we look forward to assisting you!
                     </Typography>
                 </center>
-
             </Container>
         </div>
     );
