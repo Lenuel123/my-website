@@ -32,8 +32,11 @@ const Header = ({ refs }) => {
   // };
 
   const handleScroll = (section) => {
-    refs[`${section}Ref`]?.current?.scrollIntoView({ behavior: "smooth" });
+    const formattedSection = section.toLowerCase().replace(/\s+/g, ""); // Remove spaces
+    console.log("Scrolling to:", formattedSection);
+    refs[`${formattedSection}Ref`]?.current?.scrollIntoView({ behavior: "smooth" });
   };
+  
 
   return (
     <AppBar position="sticky" style={{ backgroundColor: '#0061fe', boxShadow: 'none' }}>

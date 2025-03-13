@@ -39,12 +39,12 @@ const Home = () => {
                                     display: { xs: 'none', md: 'flex' },
                                     fontFamily: 'monospace',
                                     lineHeight: '2rem',
-                                    color: '#0061fe',
+                                    color: '#000',
                                     textDecoration: 'none',
                                     zIndex: 1
                                 }}
                             >
-                                <span>Turn Your Sketches into <span style={{ color: '#f9b934'}}>Digital Masterpieces</span> Effortlessly!</span>
+                                <span>Turn Your Sketches into <span style={{ color: '#0061fe'}}><b>Digital Masterpieces</b></span> Effortlessly!</span>
                             </Typography>
 
                             <Typography
@@ -55,7 +55,7 @@ const Home = () => {
                                     display: { xs: 'none', md: 'flex' },
                                     fontFamily: 'monospace',
                                     lineHeight: '2rem',
-                                    color: '#0061fe',
+                                    color: '#000',
                                     textDecoration: 'none',
                                     zIndex: 1
                                 }}

@@ -45,8 +45,8 @@ const Features = () => {
                                     mb: 3,
                                     display: { xs: 'none', md: 'flex' },
                                     fontFamily: 'monospace',
-                                    lineHeight: '2rem',
-                                    color: '#0061fe',
+                                    lineHeight: '1.5rem',
+                                    color: '#000',
                                     textDecoration: 'none',
                                     zIndex: 1
                                 }}
@@ -72,8 +72,8 @@ const Features = () => {
                                     mb: 3,
                                     display: { xs: 'none', md: 'flex' },
                                     fontFamily: 'monospace',
-                                    lineHeight: '2rem',
-                                    color: '#0061fe',
+                                    lineHeight: '1.5rem',
+                                    color: '#000',
                                     textDecoration: 'none',
                                     zIndex: 1
                                 }}
@@ -97,8 +97,8 @@ const Features = () => {
                                     mb: 3,
                                     display: { xs: 'none', md: 'flex' },
                                     fontFamily: 'monospace',
-                                    lineHeight: '2rem',
-                                    color: '#0061fe',
+                                    lineHeight: '1.5rem',
+                                    color: '#000',
                                     textDecoration: 'none',
                                     zIndex: 1
                                 }}
@@ -124,8 +124,8 @@ const Features = () => {
                                     mb: 3,
                                     display: { xs: 'none', md: 'flex' },
                                     fontFamily: 'monospace',
-                                    lineHeight: '2rem',
-                                    color: '#0061fe',
+                                    lineHeight: '1.5rem',
+                                    color: '#000',
                                     textDecoration: 'none',
                                     zIndex: 1
                                 }}
@@ -150,8 +150,8 @@ const Features = () => {
                                     mb: 3,
                                     display: { xs: 'none', md: 'flex' },
                                     fontFamily: 'monospace',
-                                    lineHeight: '2rem',
-                                    color: '#0061fe',
+                                    lineHeight: '1.5rem',
+                                    color: '#000',
                                     textDecoration: 'none',
                                     zIndex: 1
                                 }}
@@ -177,8 +177,8 @@ const Features = () => {
                                     mb: 3,
                                     display: { xs: 'none', md: 'flex' },
                                     fontFamily: 'monospace',
-                                    lineHeight: '2rem',
-                                    color: '#0061fe',
+                                    lineHeight: '1.5rem',
+                                    color: '#000',
                                     textDecoration: 'none',
                                     zIndex: 1
                                 }}
@@ -210,8 +210,8 @@ const Features = () => {
                         mb: 5,
                         display: { xs: 'none', md: 'flex' },
                         fontFamily: 'monospace',
-                        lineHeight: '2rem',
-                        color: '#0061fe',
+                        lineHeight: '1.5rem',
+                        color: '#000',
                         textDecoration: 'none',
                         zIndex: 1
                     }}

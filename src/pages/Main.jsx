@@ -4,22 +4,23 @@ import { useRef } from "react";
 import About from "./About/About";
 import Mission from "./About/Mission";
 import Features from "./About/Features";
-import ContactUs from "./ContactUs";
+import ContactUs from "./Contact/ContactUs";
+import ContactForm from "./Contact/ContactForm";
 
 const Main = () => {
   const homeRef = useRef(null);
   const aboutRef = useRef(null);
-  const missionRef = useRef(null);
   const featuresRef = useRef(null);
-  const contactRef = useRef(null);
+  const contactusRef = useRef(null);
 
   return (
-    <MainLayout refs={{ homeRef, aboutRef, missionRef, featuresRef, contactRef }}>
+    <MainLayout refs={{ homeRef, aboutRef, featuresRef, contactusRef }}>
       <div ref={homeRef}><Home /></div>
       <div ref={aboutRef}><About /></div>
-      <div ref={missionRef}><Mission /></div>
+      <div><Mission /></div>
       <div ref={featuresRef}><Features /></div>
-      <div ref={contactRef}><ContactUs /></div>
+      <div ref={contactusRef}><ContactUs /></div>
+      <div><ContactForm /></div>
     </MainLayout>
   );
 };
