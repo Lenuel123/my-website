@@ -36,13 +36,14 @@ const ContactUs = () => {
                                 color: '#',
                                 textDecoration: 'none',
                             }}
+                             data-aos="fade-right"
                         >
                         Have questions or need assistance? We're here to help! Whether you're looking for support, collaboration opportunities, or just want to share feedback, feel free to reach out to us.
                         </Typography>
                     </Col>
 
                     <Col>
-                        <img src={contact} height={'100%'} style={{ position: 'absolute', top: 0 }} />
+                        <img src={contact} height={'100%'} style={{ position: 'absolute', top: 0 }}  data-aos="fade-left" />
                     </Col>
                 </Row>
 

@@ -21,7 +21,7 @@ const ContactForm = () => {
         <div style={{ height: '100%', backgroundColor: '', padding: '50px' }}>
             <Container maxWidth="sm">
                 <form onSubmit={handleSubmit}>
-                    <div className="mb-4">
+                    <div className="mb-3" data-aos="fade-up">
                         <div>
                             <b>Full Name <span className="text-danger">*</span></b>
                         </div>
@@ -36,7 +36,7 @@ const ContactForm = () => {
                         />
                     </div>
 
-                    <div className="mb-4">
+                    <div className="mb-3" data-aos="fade-right">
                         <div>
                             <b>E-mail <span className="text-danger">*</span></b>
                         </div>
@@ -51,7 +51,7 @@ const ContactForm = () => {
                         />
                     </div>
 
-                    <div className="mb-4">
+                    <div className="mb-3"  data-aos="fade-left">
                         <div>
                             <b>Message <span className="text-danger">*</span></b>
                         </div>
@@ -92,6 +92,7 @@ const ContactForm = () => {
                         textDecoration: 'none',
                         textAlign: 'center'
                     }}
+                     data-aos="fade-up"
                 >
                     We value your time and will respond as soon as possible.<br />Thank you for choosing Gestures, and we look forward to assisting you!
                 </Typography>

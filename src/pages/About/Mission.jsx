@@ -19,7 +19,12 @@ const Mission = () => {
                     }}
                 >
                     <span>
-                        Our mission is to <span className='text-primary'>bridge the gap</span> between <span className='text-success'>traditional and digital art</span> by <span className='text-warning'>automating</span> tedious sketching processes.
+                        <span data-aos="fade-right">
+                        Our mission is to <span className='text-primary'>bridge the gap</span> between <span className='text-success'>traditional and digital art</span> by
+                        </span>
+                        <span data-aos="fade-left">
+                        <span className='text-warning'> automating</span> tedious sketching processes.
+                        </span>
                     </span>
                 </Typography>
             </Container>

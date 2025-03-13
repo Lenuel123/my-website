@@ -15,7 +15,8 @@ const About = () => {
         }}>
             <div className='d-flex justify-content-center align-items-center h-100 w-100'>
                 <Container maxWidth="lg">
-                    <div style={{ backgroundColor: 'rgba(0,0,0,.9)', borderRadius: '15px', padding: '30px' }}>
+                    <div style={{ backgroundColor: 'rgba(0,0,0,.9)', borderRadius: '15px', padding: '30px' }} data-aos="fade-up"
+                        data-aos-anchor-placement="center-center">
                         <Typography
                             variant="h4"
                             noWrap

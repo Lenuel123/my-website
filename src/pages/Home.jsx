@@ -43,6 +43,7 @@ const Home = () => {
                                     textDecoration: 'none',
                                     zIndex: 1
                                 }}
+                                 data-aos="fade-right"
                             >
                                 <span>Turn Your Sketches into <span style={{ color: '#0061fe'}}><b>Digital Masterpieces</b></span> Effortlessly!</span>
                             </Typography>
@@ -59,6 +60,7 @@ const Home = () => {
                                     textDecoration: 'none',
                                     zIndex: 1
                                 }}
+                                 data-aos="fade-right"
                             >
                                 Gestures is an AI-powered platform that transforms your manual sketches<br/> into refined digital drawings in seconds.
                             </Typography>
@@ -66,7 +68,7 @@ const Home = () => {
 
                         <Col sx={{ xs: '12', md: '6', lg: '6' }}>
                         <div className='d-flex justify-content-center'>
-                            <img src={home1} height={'80%'} width={'80%'} />
+                            <img src={home1} height={'80%'} width={'80%'} data-aos="fade-left" />
                         </div>
                         </Col>
                     </Row>
