@@ -22,7 +22,6 @@ const About = () => {
                             noWrap
                             sx={{
                                 mb: 3,
-                                display: { xs: 'none', md: 'flex' },
                                 fontWeight: 700,
                                 lineHeight: '3rem',
                                 color: '#fff',
@@ -35,11 +34,11 @@ const About = () => {
                         <Typography
                             variant="h6"
                             sx={{
-                                display: { xs: 'none', md: 'flex' },
                                 fontFamily: 'monospace',
                                 lineHeight: '2rem',
                                 color: '#fff',
                                 textDecoration: 'none',
+                                textAlign: 'justify'
                             }}
                         >
                             Our platform is designed to foster creativity and artistic growth among students and teenagers. We provide engaging tutorials, hands-on projects, and interactive tools that make learning digital art and design both fun and accessible. Whether you're a beginner or an aspiring artist, our community-driven space offers the resources and inspiration you need to explore your artistic potential and bring your ideas to life.

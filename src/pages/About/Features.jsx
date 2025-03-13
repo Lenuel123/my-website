@@ -10,23 +10,22 @@ import panda from '../../assets/panda.png'
 import wave2 from '../../assets/wave2.png'
 import wave3 from '../../assets/wave3.png'
 import '../../styles/features.css'
+import { isMobile } from 'react-device-detect'
 
 const Features = () => {
 
     return (
         <div style={{ height: '100%', backgroundColor: '', position: 'relative' }}>
             <img src={wave2} width={'100%'} style={{ position: 'absolute', top: 0 }} />
-            <Container maxWidth="lg" sx={{ pt: 40, pb: 50 }}>
+            <Container maxWidth="lg" sx={{ pt: !isMobile ? 40 : 15, pb: !isMobile ? 50 : 15 }}>
                 <Typography
                     variant="h4"
                     sx={{
                         mb: 3,
-                        display: { xs: 'none', md: 'flex' },
                         fontWeight: 700,
                         lineHeight: '3rem',
                         color: '#0061fe',
                         textDecoration: 'none',
-                        textAlign: 'center'
                     }}
                 >
                     How it Works?
@@ -43,23 +42,24 @@ const Features = () => {
                                 variant="h6"
                                 sx={{
                                     mb: 3,
-                                    display: { xs: 'none', md: 'flex' },
                                     fontFamily: 'monospace',
                                     lineHeight: '1.5rem',
                                     color: '#000',
                                     textDecoration: 'none',
-                                    zIndex: 1
+                                    zIndex: 1,
+                                    alignItems: 'justify'
                                 }}
                             >
                                 Users can either upload a manual sketch or create a new one using the platform’s digital tools.
                             </Typography>
                         </Card>
                     </Col>
-                    <Col sx={{ xs: '12', md: '6', lg: '6' }} />
+                    {!isMobile && <Col sx={{ xs: '12', md: '6', lg: '6' }} />}
                 </Row>
+                <br/>
 
                 <Row>
-                    <Col sx={{ xs: '12', md: '6', lg: '6' }} />
+                {!isMobile && <Col sx={{ xs: '12', md: '6', lg: '6' }} />}
                     <Col sx={{ xs: '12', md: '6', lg: '6' }}>
                         <Card sx={{ p: 2, px: 3, borderRadius: '15px' }} data-aos="fade-up-left">
                             <div className='d-flex align-items-center'>
@@ -70,12 +70,12 @@ const Features = () => {
                                 variant="h6"
                                 sx={{
                                     mb: 3,
-                                    display: { xs: 'none', md: 'flex' },
                                     fontFamily: 'monospace',
                                     lineHeight: '1.5rem',
                                     color: '#000',
                                     textDecoration: 'none',
-                                    zIndex: 1
+                                    zIndex: 1,
+                                    alignItems: 'justify'
                                 }}
                             >
                                 The AI analyzes the sketch, detects edges, and enhances details while preserving artistic intent.
@@ -83,51 +83,53 @@ const Features = () => {
                         </Card>
                     </Col>
                 </Row>
+                <br/>
 
                 <Row>
                     <Col sx={{ xs: '12', md: '6', lg: '6' }}>
                         <Card sx={{ p: 2, px: 3, borderRadius: '15px' }} data-aos="fade-up-right">
                             <div className='d-flex align-items-center'>
                                 <Looks3Rounded fontSize='large' sx={{ color: '#0061fe', marginRight: '5px' }} />
-                                <h5 className='text-uppercase' style={{ margin: 0, color: '#0061fe' }}><b>Style Selection (Optional)</b></h5>
+                                <h5 className='text-uppercase' style={{ margin: 0, color: '#0061fe' }}><b>Style Selection</b></h5>
                             </div>
                             <Typography
                                 variant="h6"
                                 sx={{
                                     mb: 3,
-                                    display: { xs: 'none', md: 'flex' },
                                     fontFamily: 'monospace',
                                     lineHeight: '1.5rem',
                                     color: '#000',
                                     textDecoration: 'none',
-                                    zIndex: 1
+                                    zIndex: 1,
+                                    alignItems: 'justify'
                                 }}
                             >
                                 Choose from different artistic styles, line weights, or shading techniques to personalize the output.
                             </Typography>
                         </Card>
                     </Col>
-                    <Col sx={{ xs: '12', md: '6', lg: '6' }} />
+                    {!isMobile && <Col sx={{ xs: '12', md: '6', lg: '6' }} />}
                 </Row>
+                <br/>
 
                 <Row>
-                    <Col sx={{ xs: '12', md: '6', lg: '6' }} />
+                {!isMobile && <Col sx={{ xs: '12', md: '6', lg: '6' }} />}
                     <Col sx={{ xs: '12', md: '6', lg: '6' }}>
                         <Card sx={{ p: 2, px: 3, borderRadius: '15px' }} data-aos="fade-up-left">
                             <div className='d-flex align-items-center'>
                                 <Looks4Rounded fontSize='large' sx={{ color: '#0061fe', marginRight: '5px' }} />
-                                <h5 className='text-uppercase' style={{ margin: 0, color: '#0061fe' }}><b>Refinement & Customization</b></h5>
+                                <h5 className='text-uppercase text-truncate' style={{ margin: 0, color: '#0061fe' }}><b>Refinement & Customization</b></h5>
                             </div>
                             <Typography
                                 variant="h6"
                                 sx={{
                                     mb: 3,
-                                    display: { xs: 'none', md: 'flex' },
                                     fontFamily: 'monospace',
                                     lineHeight: '1.5rem',
                                     color: '#000',
                                     textDecoration: 'none',
-                                    zIndex: 1
+                                    zIndex: 1,
+                                    alignItems: 'justify'
                                 }}
                             >
                                 Adjust AI-generated details, fine-tune elements, or manually edit parts of the sketch.
@@ -136,35 +138,37 @@ const Features = () => {
                         </Card>
                     </Col>
                 </Row>
+                <br/>
 
                 <Row>
                     <Col sx={{ xs: '12', md: '6', lg: '6' }}>
                         <Card sx={{ p: 2, px: 3, borderRadius: '15px' }} data-aos="fade-up-right">
                             <div className='d-flex align-items-center'>
                                 <Looks5Rounded fontSize='large' sx={{ color: '#0061fe', marginRight: '5px' }} />
-                                <h5 className='text-uppercase' style={{ margin: 0, color: '#0061fe' }}><b>Preview & Adjustments</b></h5>
+                                <h5 className='text-uppercase text-truncate' style={{ margin: 0, color: '#0061fe' }}><b>Preview & Adjustments</b></h5>
                             </div>
                             <Typography
                                 variant="h6"
                                 sx={{
                                     mb: 3,
-                                    display: { xs: 'none', md: 'flex' },
                                     fontFamily: 'monospace',
                                     lineHeight: '1.5rem',
                                     color: '#000',
                                     textDecoration: 'none',
-                                    zIndex: 1
+                                    zIndex: 1,
+                                    alignItems: 'justify'
                                 }}
                             >
                                 View the enhanced sketch before finalizing, making any necessary modifications.
                             </Typography>
                         </Card>
                     </Col>
-                    <Col sx={{ xs: '12', md: '6', lg: '6' }} />
+                    {!isMobile && <Col sx={{ xs: '12', md: '6', lg: '6' }} />}
                 </Row>
+                <br/>
 
                 <Row>
-                    <Col sx={{ xs: '12', md: '6', lg: '6' }} />
+                {!isMobile && <Col sx={{ xs: '12', md: '6', lg: '6' }} />}
                     <Col sx={{ xs: '12', md: '6', lg: '6' }}>
                         <Card sx={{ p: 2, px: 3, borderRadius: '15px' }} data-aos="fade-up-left">
                             <div className='d-flex align-items-center'>
@@ -175,12 +179,12 @@ const Features = () => {
                                 variant="h6"
                                 sx={{
                                     mb: 3,
-                                    display: { xs: 'none', md: 'flex' },
                                     fontFamily: 'monospace',
                                     lineHeight: '1.5rem',
                                     color: '#000',
                                     textDecoration: 'none',
-                                    zIndex: 1
+                                    zIndex: 1,
+                                    alignItems: 'justify'
                                 }}
                             >
                                 Download the final artwork in high resolution, export it in multiple formats, or share it directly to social media or design tools.
@@ -192,13 +196,11 @@ const Features = () => {
                 <Typography
                     variant="h4"
                     sx={{
-                        mt: 15,
-                        display: { xs: 'none', md: 'flex' },
+                        mt: !isMobile ? 15 : 10,
                         fontWeight: 700,
                         lineHeight: '3rem',
                         color: '#0061fe',
                         textDecoration: 'none',
-                        textAlign: 'center'
                     }}
                 >
                     Who It’s For?
@@ -208,7 +210,6 @@ const Features = () => {
                     variant="h6"
                     sx={{
                         mb: 5,
-                        display: { xs: 'none', md: 'flex' },
                         fontFamily: 'monospace',
                         lineHeight: '1.5rem',
                         color: '#000',

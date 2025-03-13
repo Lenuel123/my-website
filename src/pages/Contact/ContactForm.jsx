@@ -1,5 +1,6 @@
 import { Button, Container, Typography } from "@mui/material";
 import { useState } from "react";
+import { isMobile } from "react-device-detect";
 
 const ContactForm = () => {
     const [formData, setFormData] = useState({
@@ -18,7 +19,7 @@ const ContactForm = () => {
     };
 
     return (
-        <div style={{ height: '100%', backgroundColor: '', padding: '50px' }}>
+        <div style={{ height: '100%', backgroundColor: '', padding: !isMobile ? '50px' : '20px' }}>
             <Container maxWidth="sm">
                 <form onSubmit={handleSubmit}>
                     <div className="mb-3" data-aos="fade-up">
@@ -51,7 +52,7 @@ const ContactForm = () => {
                         />
                     </div>
 
-                    <div className="mb-3"  data-aos="fade-left">
+                    <div className="mb-3" data-aos="fade-left">
                         <div>
                             <b>Message <span className="text-danger">*</span></b>
                         </div>
@@ -81,21 +82,24 @@ const ContactForm = () => {
                         </Button>
                     </center>
                 </form>
+                <br />
 
-                <Typography
-                    variant="p"
-                    sx={{
-                        mt: 5, 
-                        display: { xs: 'none', md: 'flex' },
-                        fontFamily: 'monospace',
-                        color: '#',
-                        textDecoration: 'none',
-                        textAlign: 'center'
-                    }}
-                     data-aos="fade-up"
-                >
-                    We value your time and will respond as soon as possible.<br />Thank you for choosing Gestures, and we look forward to assisting you!
-                </Typography>
+                <center>
+                    <Typography
+                        variant="p"
+                        sx={{
+                            mt: 5,
+                            fontFamily: 'monospace',
+                            color: '#',
+                            textDecoration: 'none',
+                            textAlign: 'center'
+                        }}
+                        data-aos="fade-up"
+                    >
+                        We value your time and will respond as soon as possible. Thank you for choosing Gestures, and we look forward to assisting you!
+                    </Typography>
+                </center>
+
             </Container>
         </div>
     );

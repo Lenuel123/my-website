@@ -1,5 +1,6 @@
 import { Container, Typography } from '@mui/material'
 import React from 'react'
+import { isMobile } from 'react-device-detect'
 
 const Mission = () => {
 
@@ -9,8 +10,7 @@ const Mission = () => {
                 <Typography
                     variant="h4"
                     sx={{
-                        my: 10,
-                        display: { xs: 'none', md: 'flex' },
+                        my: !isMobile ? 10 : 5,
                         fontWeight: 700,
                         lineHeight: '3rem',
                         color: '#000',

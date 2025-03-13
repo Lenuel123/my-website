@@ -2,6 +2,7 @@ import { Container, Typography } from '@mui/material'
 import React from 'react'
 import contact from '../../assets/contact.jpg'
 import { Col, Row } from 'reactstrap'
+import { isMobile } from 'react-device-detect'
 
 
 const ContactUs = () => {
@@ -10,13 +11,13 @@ const ContactUs = () => {
         <div style={{ height: '100%', backgroundColor: '', position: 'relative' }}>
             <Container maxWidth="lg">
                 <Row>
-                    <Col>
+                    <Col xs="12" md="6" lg="6">
                         <Typography
                             variant="h4"
                             sx={{
-                                mt: 20,
+                                mt: !isMobile ? 20 : 5,
                                 mb: 3,
-                                display: { xs: 'none', md: 'flex' },
+                                display: { xs: 'flex', md: 'flex' },
                                 fontWeight: 700,
                                 lineHeight: '3rem',
                                 color: '#0061fe',
@@ -30,7 +31,7 @@ const ContactUs = () => {
                         <Typography
                             variant="h6"
                             sx={{
-                                display: { xs: 'none', md: 'flex' },
+                                display: { xs: 'flex', md: 'flex' },
                                 fontFamily: 'monospace',
                                 lineHeight: '2rem',
                                 color: '#',
@@ -42,8 +43,8 @@ const ContactUs = () => {
                         </Typography>
                     </Col>
 
-                    <Col>
-                        <img src={contact} height={'100%'} style={{ position: 'absolute', top: 0 }}  data-aos="fade-left" />
+                    <Col xs="12" md="6" lg="6">
+                    {!isMobile && <img src={contact} height={'100%'} style={{ position: 'absolute', top: 0 }}  data-aos="fade-left" />}
                     </Col>
                 </Row>
 
